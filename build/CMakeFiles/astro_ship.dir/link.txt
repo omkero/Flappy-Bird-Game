@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/astro_ship.dir/link.d CMakeFiles/astro_ship.dir/main.cpp.o CMakeFiles/astro_ship.dir/games/flappy_bird/flappy.cpp.o CMakeFiles/astro_ship.dir/core/window/Window.cpp.o CMakeFiles/astro_ship.dir/core/renderer/Renderer.cpp.o -o astro_ship  -lSDL2 -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lm
