@@ -357,9 +357,10 @@ void FlappyBird::Controls(SDL_Renderer *renderer,  SDL_Event &e, SDL_Window *win
         }
     }
     if (e.type == SDL_KEYDOWN) {
-       if (e.key.keysym.sym == SDLK_SPACE && is_game_over) {
-         this->PlayAgain(renderer, window);
-       }
+        SDL_Keycode key = e.key.keysym.sym;
+        if ((key == SDLK_RETURN || key == SDLK_KP_ENTER) && is_game_over) {
+            this->PlayAgain(renderer, window);
+        }
     }
  }
 
@@ -378,6 +379,7 @@ void FlappyBird::Controls(SDL_Renderer *renderer,  SDL_Event &e, SDL_Window *win
     bird_angle = 0;
     bird_rect.x = (window_width / 2) - bird_rect.w ;
     bird_rect.y = (window_height / 2) - (bird_rect.h / 2);
+    cloud_rect_one.x = -200;
 
     scoore = 0;
     text_surface = TTF_RenderText_Blended(text_font, std::to_string(this->scoore).c_str(), text_color);
