@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/flappy_bird.dir/link.d CMakeFiles/flappy_bird.dir/main.cpp.o CMakeFiles/flappy_bird.dir/games/flappy_bird/flappy.cpp.o CMakeFiles/flappy_bird.dir/core/window/Window.cpp.o CMakeFiles/flappy_bird.dir/core/renderer/Renderer.cpp.o -o flappy_bird  -lSDL2 -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lm

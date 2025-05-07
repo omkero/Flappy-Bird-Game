@@ -1,0 +1,3 @@
+/home/zurd/Desktop/flappy/build/CMakeFiles/flappy_bird.dir
+/home/zurd/Desktop/flappy/build/CMakeFiles/edit_cache.dir
+/home/zurd/Desktop/flappy/build/CMakeFiles/rebuild_cache.dir

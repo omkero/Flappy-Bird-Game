@@ -10,6 +10,17 @@
 #include <iostream>
 #include <random>
 
+#ifdef _WIN32
+#include <include/SDL_events.h>
+#include <include/SDL_keycode.h>
+#include <include/SDL_render.h>
+#include <include/SDL_scancode.h>
+#include <include/SDL_image.h>
+#include <include/SDL_stdinc.h>
+#include <include/SDL_timer.h>
+#include <include/SDL_video.h>
+#endif
+
 Uint32 get_pixel(SDL_Surface *surface, int x, int y) {
     int bpp = surface->format->BytesPerPixel;
     Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;

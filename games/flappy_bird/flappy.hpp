@@ -1,14 +1,24 @@
 #ifndef FLAPPY_H
 #define FLAPPY_H
 
+#include <chrono>
+#include <vector>
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_rect.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_surface.h>
-#include <chrono>
-#include <vector>
 #include <SDL2/SDL_ttf.h>
+
+#ifdef _WIN32
+#include <include/SDL.h>
+#include <include/SDL_events.h>
+#include <include/SDL_rect.h>
+#include <include/SDL_render.h>
+#include <include/SDL_surface.h>
+#include <include/SDL_ttf.h>
+#endif
 
 struct PipeVec {
     SDL_Rect pipe;

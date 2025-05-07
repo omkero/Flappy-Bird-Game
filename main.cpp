@@ -1,27 +1,32 @@
-// #define SDL_MAIN_HANDLED // Avoid SDL from defining main() for you
-
+#include <iostream>
+#include "core/window/Window.hpp"
+#include "games/flappy_bird/flappy.hpp"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_image.h>
-#include <iostream>
-#include "core/window/Window.hpp"
-#include "games/flappy_bird/flappy.hpp"
+
 
 #ifdef _WIN32
+#define SDL_MAIN_HANDLED // Avoid SDL from defining main() for you
 #include <include/SDL.h>
 #include <include/SDL_ttf.h>
 #include <include/SDL_mixer.h>
 #include <include/SDL_image.h>
+#include <include/SDL_renderer.h>
 #include <Windows.h>
 #endif
 
 // int main(int argc, char *argv[]) for console
 
-// int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
+//
 
+#ifdef _WIND32
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
+#else
 int main(int argc, char *argv[])
+#endif
 {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
